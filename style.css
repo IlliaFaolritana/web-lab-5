@@ -1,0 +1,98 @@
+body{
+    margin:0;
+    font-family: 'Tahoma', sans-serif;
+}
+img{
+    display: block;
+    max-height: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+a {
+    color: inherit;
+}
+.item{
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.main-container{
+    min-height: 100vh;
+    font-size: 18px;
+}
+header{
+    box-sizing: border-box;
+    height: 75px;
+    padding: 0 0 0 1em;
+    background-color:#0E3A2F;
+}
+h1, h2{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    align-content: center;
+    color: #78FAAE;
+}
+h3, h4{
+    font-weight: normal;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100px, calc(100% - 200px), 100px;
+    height: calc(100% - 150px);
+    min-height: calc(100vh - 150px);
+    grid-template-areas: 
+    'second third third'
+    'second forth fifth'
+    'second sixth fifth';
+}
+.second{
+    padding: 0 1em 0 0;
+    grid-area: second;
+    word-break: break-word;
+    background-color: #394748;
+    color: #FFFFFF;
+}
+.third{
+    grid-area: third;
+    background-color: #78FAAE;
+    color:#0E3A2F
+}
+.forth{
+    grid-area: forth;
+    background-color:#F1F2F2;
+}
+.fifth{
+    grid-area: fifth;
+    background-color: #394748;
+    color: #FFFFFF;
+}
+.sixth{
+    grid-area: sixth;
+    background-color: #78FAAE;
+    color:#0E3A2F
+}
+footer{
+    box-sizing: border-box;
+    text-align: right;
+    height: 75px;
+    padding: 0 1em 0 0;
+    background-color:#0E3A2F;
+}
+
+@media screen and (max-width: 800px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto, 100px, auto, 100px, auto;
+        height: calc(100% - 150px);
+        min-height: calc(100vh - 150px);
+        grid-template-areas: 
+        'second'
+        'third'
+        'forth'
+        'sixth'
+        'fifth';
+    }
+}
